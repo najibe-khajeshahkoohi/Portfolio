@@ -5,33 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Redirect</title>
   <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: sans-serif;
-      background-color: #F5F5F5;
-      color: #555;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <p>در حال هدایت به نسخه مناسب پورتفولیو...</p>
+
+  <iframe id="figmaFrame" src=""></iframe>
 
   <script>
     const width = window.innerWidth;
+    const iframe = document.getElementById("figmaFrame");
 
     if (width <= 768) {
-      // لینک نسخه موبایل
-      window.location.href = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1364-8380&p=f&viewport=795%2C295%2C0.02&t=hBTWkinMHPZ70nJM-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1364%3A8422";
+      // موبایل
+      iframe.src = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1364-8380&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1364%3A8422&hide-ui=true";
     } else if (width <= 1024) {
-      // لینک نسخه تبلت
-      window.location.href = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1364-4943&p=f&viewport=617%2C232%2C0.02&t=hBTWkinMHPZ70nJM-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1364%3A4965";
+      // تبلت
+      iframe.src = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1364-4943&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1364%3A4965&hide-ui=true";
     } else {
-      // لینک نسخه دسکتاپ
-      window.location.href = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1237-122&p=f&viewport=717%2C205%2C0.02&t=hBTWkinMHPZ70nJM-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1266%3A1188";
+      // دسکتاپ
+      iframe.src = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1237-122&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1266%3A1188&hide-ui=true";
     }
   </script>
+
 </body>
 </html>
