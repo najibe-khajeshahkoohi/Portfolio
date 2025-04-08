@@ -21,11 +21,14 @@
   <script>
     const width = window.innerWidth;
 
-    if (width <= 768) {
+    if (width < 600) {
+      // گوشی موبایل
       window.location.href = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1364-8380&p=f&viewport=1192%2C178%2C0.03&t=hBTWkinMHPZ70nJM-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1364%3A8422";
-    } else if (width <= 1024) {
+    } else if (width >= 600 && width < 1024) {
+      // تبلت
       window.location.href = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1364-4943&p=f&viewport=617%2C232%2C0.02&t=hBTWkinMHPZ70nJM-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1364%3A4965";
     } else {
+      // دسکتاپ
       window.location.href = "https://www.figma.com/proto/slQGmaWNJt3jBB0TTi5qGl/Portfolio?node-id=1237-122&p=f&viewport=717%2C205%2C0.02&t=hBTWkinMHPZ70nJM-0&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=1266%3A1188";
     }
   </script>
